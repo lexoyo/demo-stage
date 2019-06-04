@@ -1,0 +1,19 @@
+{
+  "name": "test-ondex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "drag-drop-stage-component": "^1.0.12",
+    "redux": "^4.0.1",
+    "requirejs": "^2.3.6"
+  }
+}

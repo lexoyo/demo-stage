@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <style>
+    body {font-family: Arial;}
+    .custom-container{
+      width: 500px;
+      margin: 0 auto;
+    }
+    img{
+      width: 40%;
+      margin: 0 auto;
+      padding: 10px
+    }
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
+</head>
+<body class="custom-container">
+  <div class="col-sm-12 text-center">
+    <img src="images/dummy-logo-300x140.png" alt="logo">
+  </div>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Free')">Free</button>
+    <button class="tablinks" onclick="openCity(event, 'Paid')" id="defaultOpen">Paid</button>
+    <button class="tablinks" onclick="openCity(event, 'Roaming')">Roaming</button>
+  </div>
+
+  <div id="Free" class="tabcontent">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" name="" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <select class="form-control">
+          <option>Country</option>
+          <option>India</option>
+          <option>USA</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <a href="sendOTP.html" class="btn btn-danger w-100">Send OTP</a>
+      </div>
+      <div class="form-group">
+        <a href="" class="btn btn-danger w-100">Already Have OTP</a>
+      </div>
+      <div class="form-group">
+        <a href="" class="btn btn-danger w-100">Free Scratch Card</a>
+      </div>
+    </form>
+  </div>
+
+  <div id="Paid" class="tabcontent">
+    <div class="form-group">
+        <input type="text" class="form-control" name="" value="Test">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="" value="abc123">
+      </div>
+      <div class="form-group">
+        <select class="form-control">
+          <option>3MB</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="checkbox"  name=""> I Agree to <a href="">Terms & Conditions</a>
+      </div>
+      <div class="form-group">
+        <input type="checkbox"  name=""> Remember Me
+      </div>
+      <div class="form-group">
+        <a href="paid-home.html" class="btn btn-danger w-100">Submit</a>
+      </div>
+  </div>
+
+  <div id="Roaming" class="tabcontent">
+    <h3>Roaming content.</h3>
+  </div>
+  <!-- jQuery library -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>

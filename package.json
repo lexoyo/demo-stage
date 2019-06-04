@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ."
+    "start": "http-server .",
+    "postinstall": "cp node_modules/requirejs/require.js ./  && cp node_modules/redux/dist/redux.js ./ && cp -r node_modules/drag-drop-stage-component/pub/js ./drag-drop-stage-component"
   },
   "author": "",
   "license": "ISC",
